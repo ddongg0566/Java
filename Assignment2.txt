@@ -129,3 +129,33 @@ public class Assignment2 {
 		}
 	}
 }
+	System.out.println("5번 =========================================================");
+		int N=Integer.parseInt(scanner.nextLine());
+		for(int i=1; i<N;i++) {
+			//해당 줄수에서 한칸씩 늘어나는 for문
+			for(int j=1; j<N; j++) {
+			int Math =i*j;
+			boolean ad=true;
+			while(ad) {
+				if(Math % 10 == 9) {
+				   Math %=10;
+				   ad =false;
+				}else if (Math >=10) {
+					Math /= 10;
+					
+				}else if (Math<10) {
+					ad =false;
+				}
+			}
+				if(i%10==9 || j%10==9 || Math == 9) {
+				System.out.printf("%d * %d =%d\t", j ,i, i*j);
+				}
+				else {
+				System.out.printf("%d * %d =9\t", j, i);
+				}
+			
+			}
+			System.out.println();
+		}
+	}
+}
