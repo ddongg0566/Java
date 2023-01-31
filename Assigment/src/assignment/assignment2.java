@@ -14,6 +14,7 @@ public class assignment2 {
 		// 제3사분면 : x<0, y<0
 		// 제4사분면 : x>0, y<0
 		// 문제출처, 백준(https://www.acmicpc.net/) 14681번 문제
+		System.out.println("1번 =========================================================");
 		System.out.println("x의 값을 넣으시오");
 		int x = Integer.parseInt(scanner.nextLine());
 		System.out.println("y의 값을 넣으시오");
@@ -34,6 +35,7 @@ public class assignment2 {
 		// 1900년은 100의 배수이고 400의 배수는 아니기 때문에 윤년이 아닙니다.
 		// HiNT : 이중 IF문 사용
 		// 문제출처, 백준(https://www.acmicpc.net/) 2753번 문제
+		System.out.println("2번 =========================================================");
 		System.out.println("연도의 값을 넣으시오");
 		int year = Integer.parseInt(scanner.nextLine());
 		if(year%4==0 ? year%100==0 : year%400==0) {
@@ -46,13 +48,40 @@ public class assignment2 {
 		// 구현하세요.
 		// 예를 들어, 가위가 주어졌을 때 "이기기 위해선 바위를 내야합니다." 라고 출력하도록 하세요.
 		// 한 단어를 입력받을 경우 Scanner객체의 next() 함수를 사용하면 됩니다.
+		System.out.println("3번 =========================================================");
+		System.out.println("가위,바위,보 중 하나를 입력하시요");
+		String type = scanner.nextLine();
+		switch(type) {
+		case "가위":
+			System.out.println("이기기 위해선 바위를 내야합니다");
+			break;
+		case "바위":
+			System.out.println("이기기 위해선 보를 내야합니다");
+			break;
+		case "보":
+			System.out.println("이기기 위해선 가위를 내야합니다");
+			break;
+		default:System.out.println("잘못된 입력을 하셨습니다");
+			
+		}
 		
 		// 문제4) 차례대로 m과 n을 입력받아 m단을 n번째까지 출력하도록 하세요.
 		// 예를 들어 2와 3을 입력받았을 경우 아래처럼 출력합니다.
 		// 2 X 1 = 2
 		// 2 X 2 = 4
 		// 2 X 3 = 6
-
+		System.out.println("4번 =========================================================");
+		System.out.println("m값을 넣으세요");
+		int m=Integer.parseInt(scanner.nextLine());
+		System.out.println("n값을 넣으세요");
+		int n=Integer.parseInt(scanner.nextLine());
+		for (int i=m; i<=m; i++) {
+			for(int j=1; j<=n; j++) {
+				System.out.println(m +" x "+j + " = " + (m*j)  );
+			}
+		}
+		
+		
 		//문제5) 호수에서 살고 있는 얼음요정이 곱셈을 공부하기로 했다. 근데 이 요정은 너무 멍청해서 9라는 숫자 이외에는 헷갈려서 잘 쓰지 못한다고 한다. 그래서 사람과는 곱셈방식이 좀 다르다.
 		//(규칙 1)
 
@@ -83,5 +112,34 @@ public class assignment2 {
 		//1*7=9	 2*7=9	 3*7=9 	4*7=9 	5*7=9 	6*7=9 	7*7=49 	8*7=9 	9*7=63 
 		//1*8=9	 2*8=9	 3*8=9 	4*8=9 	5*8=9 	6*8=9 	7*8=9 	8*8=9 	9*8=72 
 		//1*9=9	 2*9=18	 3*9=27 4*9=36 	5*9=45 	6*9=54 	7*9=63 	8*9=72 	9*9=81
-	}
-}
+		
+		
+		System.out.println("5번 =========================================================");
+		int N=Integer.parseInt(scanner.nextLine());
+		for(int i=1; i<N;i++) {
+			//해당 줄수에서 한칸씩 늘어나는 for문
+			for(int j=1; j<N; j++) {
+			int Math =i*j;
+			boolean ad=true;
+			while(ad) {
+				if(Math % 10 == 9) {
+				   Math %=10;
+				   ad =false;
+				}else if (Math >=10) {
+					Math /= 10;
+					
+				}else if (Math<10) {
+					ad =false;
+				}
+			}
+				if(i%10==9 || j%10==9 || Math == 9) {
+				System.out.printf("%d * %d =%d\t", j ,i, i*j);
+				}
+				else {
+				System.out.printf("%d * %d =9\t", j, i);
+				}
+			
+			}
+			System.out.println();
+		}
+	}}
