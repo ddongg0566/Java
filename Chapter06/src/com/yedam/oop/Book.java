@@ -32,8 +32,8 @@ public class Book {
 	public Book() {
 	}
 	
-	public Book(String sort, int price, String company, int isbn) {
-		
+	public Book(String name, String sort, int price, String company, int isbn) {
+		this.name=name;
 		this.sort=sort;
 		this.price=price;
 		this.company=company;
@@ -51,7 +51,7 @@ public class Book {
 	
 	// 메소드
 	void getInfo() {
-		System.out.println("책 이름: 혼자 공부하는 자바");
+		System.out.println("책 이름:"+ name);
 		System.out.println("#내용");
 		System.out.println("1)종류:" + sort);
 		System.out.println("2)가격:" +price + "원");
@@ -59,5 +59,7 @@ public class Book {
 		System.out.printf("4)도서번호: %04d \n", isbn);
 
 	}
-	
+	void setsort(String sort) {
+		this.sort= sort;
+	}
 }

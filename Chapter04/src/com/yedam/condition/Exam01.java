@@ -8,22 +8,22 @@ public class Exam01 {
 		// 0 <= Random < 1
 		// 0 <= random < 45 (*45)
 		// 1 <= random < 46 (+1)
-		// (int)(Math.random() * 45)+1
+		 //(int)(Math.random() * 45)+1
 
 		// 0 <= Random < 1
 		// 0 <= Random < 60
 		// 40 <= Random < 100
-//		int score = (int) (Math.random()*60)+40; //40~100
+		int score = (int) (Math.random()*60)+40; //40~100
 
-//		if(score >=50) {
-//			System.out.println("점수 : " + score);
-//		} else {
-//			System.out.println("낮은 점수 : " + score);
-//		}
+		if(score >=50) {
+			System.out.println("점수 : " + score);
+		} else {
+			System.out.println("낮은 점수 : " + score);
+		}
 
 		// 삼항 연산자
-//		String str = (score >= 50)? "점수 : "+score : "낮은 점수 : " + score;
-//		System.out.println(str);
+		String str = (score >= 50)? "점수 : "+score : "낮은 점수 : " + score;
+	System.out.println(str);
 
 		// if ~ else
 

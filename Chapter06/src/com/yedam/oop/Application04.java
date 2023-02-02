@@ -27,6 +27,8 @@ public class Application04 {
 				for(int i =0; i<stdAry.length; i++) {
 					//임의의 객체를 생성해서, 배열에 객체(입력한데이터)를 담는 그릇 용도
 					Student std = new Student();
+					
+					
 					System.out.println("이름>");
 					String name = sc.nextLine();
 					std.name= name;

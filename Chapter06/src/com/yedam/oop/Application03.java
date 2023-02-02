@@ -18,7 +18,7 @@ public class Application03 {
 			System.out.println("gas를 주입할 필요함.");
 		}
 
-	Book bok = new Book("학습서", 24000, "한빛 미디어", 0001);
+	Book bok = new Book("혼공자", "학습서", 24000, "한빛 미디어", 0001);
 	bok.getInfo();
 	
 	Student std = new Student("이대규" , 9906, 96,89,59 );
