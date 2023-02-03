@@ -1,48 +1,53 @@
 package com.yedam.reference;
 
 public class Exam02 {
-
 	public static void main(String[] args) {
-		// new 연산자가 없는 String
-		//memory leak -> 메모리 누수, 메모리 부족
-				
-		String name1 = "신용권";
-		String name2 = "신용권";
-		String name3 = new String ("신용권");
-		String name4 = new String ("신용권");
-		System.out.println("===========일반 스트링 비교==========================\n");
-		if(name1==name2) {
-			System.out.println("name1과 name2는 메모리 주소 같음");
-		}else {
-			System.out.println("name1과 name2는 메모리 주소 다름");
+		//new 연산자 없는 String
+		String strVal1 = "yedam";
+		String strVal2 = "yedam";
+		
+		//==, equals
+		//== 데이터를 비교하는 게 아니고, 데이터가 살고 있는 주소(번지비교)
+		if(strVal1 == strVal2) {
+			System.out.println("strVal1과 strVal2는 메모리 주소 같음");
+		} else {
+			System.out.println("strVal1과 strVal2는 메모리 주소 다름");
 		}
-		if(name1.equals(name2))	{
-			System.out.println("name1과 name2는 데이터 같다\n");
-		}else {
-		System.out.println("name1과 name2는 데이터가 다르다\n");
+		
+		//문자열(String)간의 데이터를 비교.
+		if(strVal1.equals(strVal2)) {
+			System.out.println("strVal1과 strVal2는 데이터 같다.");
+		} else {
+			System.out.println("strVal1과 strVal2는 데이터 다르다.");
 		}
-		System.out.println("==========스트링과 new 스트링 비교====================\n");
-		if(name2==name3) {
-			System.out.println("name2과 name3는 메모리 주소 같음");
-		}else {
-			System.out.println("name2과 name3는 메모리 주소 다름");
+		
+		//new 연산자가 있는 String 객체비교
+		//객체 : 참조타입의 변수
+		
+		String strVal3 = new String("yedam");
+		String strVal4 = new String("yedam");
+		
+		if(strVal3 == strVal4) {
+			System.out.println("strVal3과 strVal4는 같은 메모리 주소.");
+		} else {
+			System.out.println("strVal3과 strVal4는 다른 메모리 주소.");
 		}
-		if(name2.equals(name3))	{
-			System.out.println("name2과 name3는 데이터 같다\n");
-		}else {
-		System.out.println("name2과 name3는 데이터가 다르다\n");
+		
+		if(strVal3.equals(strVal4)) {
+			System.out.println("strVal3과 strVal4의 데이터 같음.");
+		} else {
+			System.out.println("strVal3과 strVal4의 데이터 다름.");
 		}
-		System.out.println("==========new스트링과 new 스트링 비교=================\n");
-		if(name3==name4) {
-			System.out.println("name3과 name4는 메모리 주소 같음");
-		}else {
-			System.out.println("name3과 name4는 메모리 주소 다름");
+		
+		//new 연산자 안 쓴 String, new 연산자를 사용한 String 비교
+		if(strVal1 == strVal3) {
+			System.out.println("strVal1과 strVAl3은 같은 메모리 주소.");
+		} else {
+			System.out.println("strVal1과 strVal3은 다른 메모리 주소.");
 		}
-		if(name3.equals(name4))	{
-			System.out.println("name3과 name4는 데이터 같다");
-		}else {
-		System.out.println("name3과 name4는 데이터가 다르다");
-		}
+		
+		
+		
+		
 	}
-
 }

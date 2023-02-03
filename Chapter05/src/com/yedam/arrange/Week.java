@@ -8,5 +8,4 @@ public enum Week {
 	FRIDAY,
 	SATURDAY,
 	SUNDAY
-	
 }

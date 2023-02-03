@@ -3,12 +3,12 @@ package com.yedam.array;
 import java.util.Scanner;
 
 public class Exam03 {
-
 	public static void main(String[] args) {
+		//한 학생의 국영수 성적을 보관하는 배열
 		Scanner sc = new Scanner(System.in);
-		// 한 학생의 국영수 성적을 보관하는 배열
-		//배열생성
-		int [] point = new int[3];
+		//배열 생성
+		int[] point = new int[3];
+		
 		//첫번째 : 국어
 		System.out.println("국어점수>");
 		point[0] = Integer.parseInt(sc.nextLine());
@@ -19,42 +19,59 @@ public class Exam03 {
 		System.out.println("수학점수>");
 		point[2] = Integer.parseInt(sc.nextLine());
 		
-		
-		//점수의 총합계
+		//점수의 총 합계
 		int sum = 0;
-		for(int i=0; i<point.length; i++) {
-			sum += point[i];
+		//for문
+		//for(int i = 0; i<point.length; i++) {
+		//sum = sum + point[i];
+		//}
+		//향상된 for문
+		for(int var : point) {
+			sum += var;
 		}
-		System.out.println("점수의 총합계: " + sum);
-		
+		System.out.println("점수의 총 합계 : " + sum);
 		
 		//점수의 평균(실수)
-		double avg =0;
-		avg = (double)sum / point.length;
-		System.out.printf("점수의 평균: %5.2f\n" , avg);
-	
+		//총 합계 / 더 한 횟수(데이터의 갯수)
+		//총 합계 = sum
+		//배열.length
+		double avg = (double)sum/point.length;
+		
+		System.out.printf("점수의 평균 : %5.2f\n", avg);
+		
 		//최대값 구하기
-		int max =0;
-		int min = point[0];
-			for(int i = 0; i<point.length; i++) {
-			if(point[i]>max) {
+		int max = 0;
+		for(int i = 0; i<point.length; i++) {
+			if(point[i] > max) {
 				max = point[i];
-			}else if(point[i]<min) {
+			}
+		}
+		
+		System.out.println("최대값 : " + max);
+		
+		//최소값 구하기
+		int min = point[0];
+		for(int i=0; i<point.length; i++) {
+			if(point[i] < min) {
 				min = point[i];
 			}
-			
-	}
-			System.out.println("최대값: "+ max);
-			System.out.println("최소값: "+ min);
-			System.out.println("===================================================");
-			
-			
+		}
 		
-			
-			
-			
-			
-	
+		System.out.println("최소값 : " + min);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
-
 }
