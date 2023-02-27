@@ -1,4 +1,4 @@
-package com.yedam.homework3;
+package com.yedam.homework3A;
 
 public class performance extends Culture{
 
@@ -13,7 +13,7 @@ public class performance extends Culture{
 	
 	
 	performance(String title, int dirNum, int actNum, int audNum, int totalNum, String kind) {
-		super(title, dirNum, actNum, audNum, totalNum);
+		super(title, dirNum, actNum);
 		this.kind=kind;
 	}
 

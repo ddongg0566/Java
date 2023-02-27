@@ -1,4 +1,4 @@
-package com.yedam.homework3;
+package com.yedam.homework3A;
 
 public abstract class Culture {
 
@@ -19,12 +19,11 @@ public abstract class Culture {
 	int audNum;
 	int totalNum;
 	
-	Culture(String title, int dirNum, int actNum, int audNum, int totalNum){
+	Culture(String title, int dirNum, int actNum){
 		this.title=title;
 		this.dirNum=dirNum;
 		this.actNum=actNum;
-		this.audNum=audNum;
-		this.totalNum=totalNum;
+		
 		
 	}
 	public void setTotalScore(int score){
@@ -34,20 +33,29 @@ public abstract class Culture {
 	}//관객수와 총점을 누적시키는 기능
 		
 	public String getGrade() {
-		String x="";
-		if (totalNum <=10) {
-			System.out.println("*");
-		}else if (totalNum <=20) {
-			System.out.println("**");
-		}else if (totalNum <=30) {
-			System.out.println("***");
-		}else if (totalNum <=40) {
-			System.out.println("****");
-		}else {
-			System.out.println("*****");
+		int avg =totalNum/audNum;
+		 String grade = "";
+		switch (avg) {
+		case 1:
+			grade = "*";
+		break;
+		
+		case 2:
+			grade = "**";
+		break;
+		case 3:
+			grade = "***";
+		break;
+		case 4:
+			grade = "****";
+		break;
+		case 5:
+			grade = "******";
+		break;
+		
+		
 		}
-		return x;
-	
+		return grade;
 	} //평점을 구하는 기능
 	public abstract void getInformation(); // 정보를 출력하는 추상메소드
 	

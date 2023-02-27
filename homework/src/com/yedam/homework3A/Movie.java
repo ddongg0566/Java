@@ -1,4 +1,4 @@
-package com.yedam.homework3;
+package com.yedam.homework3A;
 
 public class Movie extends Culture{
 
@@ -9,12 +9,13 @@ public class Movie extends Culture{
 	(1) public abstract void getInformation() 
 	: 제목, 참여감독 수, 참여배우 수, 관객수, 총점, 평점을 출력하는 기능
 	 */
-	String kind;
+	String gerne;
 	
 	
-	Movie(String title, int dirNum, int actNum, int audNum, int totalNum, String kind) {
-		super(title, dirNum, actNum, audNum, totalNum);
-		this.kind=kind;
+	public Movie(String title, int dirNum, int actNum, String gerne) {
+		super(title, dirNum, actNum);
+	
+		this.gerne=gerne;
 	}
 
 
